@@ -5,7 +5,7 @@ import { DEFAULTS_BLOCKQUOTE, ELEMENT_BLOCKQUOTE } from '../defaults';
 import { BlockquoteOptions } from '../types';
 
 /**
- * If the blockquote has no child: insert an empty paragraph.
+ * Force all blockquote children to be a block, if not, wrap them in a paragraph
  */
 export const normalizeBlockquote = (
   editor: Editor,
