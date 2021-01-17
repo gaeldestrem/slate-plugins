@@ -25,6 +25,7 @@ import {
   SlatePlugin,
   SoftBreakPlugin,
   ToolbarElement,
+  withBlockquote,
 } from '@udecode/slate-plugins';
 import { createEditor } from 'slate';
 import { withHistory } from 'slate-history';
@@ -46,12 +47,12 @@ export default {
   },
 };
 
-const withPlugins = [withReact, withHistory] as const;
+const withPlugins = [withReact, withHistory, withBlockquote(options)] as const;
 
 export const Example = () => {
   const plugins: SlatePlugin[] = [];
   if (boolean('ParagraphPlugin', true)) plugins.push(ParagraphPlugin(options));
-  if (boolean('BlockquotePlugin', true))
+  if (boolean('BlockquotePlugin', true)) {
     plugins.push(BlockquotePlugin(options));
   if (boolean('CodePlugin', true)) plugins.push(CodeBlockPlugin(options));
   if (boolean('HeadingPlugin', true)) plugins.push(HeadingPlugin(options));
