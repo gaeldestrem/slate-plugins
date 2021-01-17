@@ -769,7 +769,16 @@ export const initialValueBasicElements: SlateDocument = [
       },
       {
         type: options.blockquote.type,
-        children: [{ text: 'Blockquote' }],
+        children: [
+          {
+            type: options.p.type,
+            children: [
+              {
+                text: 'Blockquote',
+              },
+            ],
+          },
+        ],
       },
       {
         type: options.code_block.type,
