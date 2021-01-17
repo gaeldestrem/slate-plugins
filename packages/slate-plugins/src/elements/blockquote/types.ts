@@ -79,3 +79,5 @@ export interface BlockquoteElementStyleProps {
 
   // Insert BlockquoteElement style props below
 }
+
+export interface BlockquoteOptions extends BlockquotePluginOptions<'type'> {}

@@ -6,9 +6,9 @@ import { CodeBlock } from '@styled-icons/boxicons-regular/CodeBlock';
 import { Subscript, Superscript } from '@styled-icons/foundation';
 import {
   FormatAlignCenter,
+  FormatAlignJustify,
   FormatAlignLeft,
   FormatAlignRight,
-  FormatAlignJustify,
   FormatBold,
   FormatItalic,
   FormatListBulleted,
@@ -75,6 +75,7 @@ import {
   UnderlinePlugin,
   useMention,
   withAutoformat,
+  withBlockquote,
   withDeserializeHTML,
   withImageUpload,
   withInlineVoid,
@@ -82,9 +83,9 @@ import {
   withList,
   withMarks,
   withNormalizeTypes,
+  withSelectOnBackspace,
   withTable,
   withTrailingNode,
-  withSelectOnBackspace,
 } from '@udecode/slate-plugins';
 import { createEditor, Node } from 'slate';
 import { withHistory } from 'slate-history';
@@ -210,6 +211,7 @@ export const Plugins = () => {
     withTable(options),
     withLink(),
     withList(options),
+    withBlockquote(options),
     withDeserializeHTML({ plugins }),
     withMarks(),
     withImageUpload(),
