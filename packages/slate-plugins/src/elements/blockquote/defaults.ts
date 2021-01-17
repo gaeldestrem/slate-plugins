@@ -1,10 +1,14 @@
+import { DEFAULTS_PARAGRAPH } from '../paragraph';
 import { BlockquoteElement } from './components/BlockquoteElement';
-import { BlockquoteKeyOption, BlockquotePluginOptionsValues } from './types';
+import {
+  BlockquoteDefaultsOptions,
+  BlockquotePluginOptionsValues,
+} from './types';
 
 export const ELEMENT_BLOCKQUOTE = 'blockquote';
 
 export const DEFAULTS_BLOCKQUOTE: Record<
-  BlockquoteKeyOption,
+  BlockquoteDefaultsOptions,
   BlockquotePluginOptionsValues
 > = {
   blockquote: {
@@ -16,4 +20,5 @@ export const DEFAULTS_BLOCKQUOTE: Record<
       as: 'blockquote',
     },
   },
+  ...DEFAULTS_PARAGRAPH,
 };

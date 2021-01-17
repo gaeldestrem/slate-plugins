@@ -8,9 +8,9 @@ import { CodeBlock } from '@styled-icons/boxicons-regular/CodeBlock';
 import { Subscript, Superscript } from '@styled-icons/foundation';
 import {
   FormatAlignCenter,
+  FormatAlignJustify,
   FormatAlignLeft,
   FormatAlignRight,
-  FormatAlignJustify,
   FormatBold,
   FormatItalic,
   FormatListBulleted,
@@ -78,6 +78,7 @@ import {
   UnderlinePlugin,
   useMention,
   withAutoformat,
+  withBlockquote,
   withDeserializeHTML,
   withImageUpload,
   withInlineVoid,
@@ -295,6 +296,7 @@ export const Example = () => {
     withTable(options),
     withLink(),
     withList(options),
+    withBlockquote(options),
     withDeserializeHTML({ plugins }),
     withMarks(),
     withImageUpload(),

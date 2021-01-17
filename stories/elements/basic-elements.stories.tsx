@@ -25,6 +25,7 @@ import {
   SlatePlugin,
   SoftBreakPlugin,
   ToolbarElement,
+  withBlockquote,
 } from '@udecode/slate-plugins';
 import { createEditor } from 'slate';
 import { withHistory } from 'slate-history';
@@ -46,7 +47,7 @@ export default {
   },
 };
 
-const withPlugins = [withReact, withHistory] as const;
+const withPlugins = [withReact, withHistory, withBlockquote(options)] as const;
 
 export const Example = () => {
   const plugins: SlatePlugin[] = [];
